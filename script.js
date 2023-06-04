@@ -1,3 +1,6 @@
+var mistakes = ['niet valsspelen, gewoon wachten', 'liefjeeeeeeeeee flink zijn', 'doe keer flink', 'geef het op', 'waarom speel je vals?', 'stop met gokken', 'wees braaf', 'wachten', 'ben je het nog niet beu?', 'nu is het genoeg', 'je website gaat kapot gaan', 'waarom geef je niet op?', 'ik weet dat het lastig is, maar je gaat moeten wachten', 'je gaat het toch nooit raden', 'ga je echt niet opgeven?', 'oké, jij je zin ... succes met gokken', "'k ga gewoon men eerste opmerking opnieuw tonen ..."];
+var index = 0;
+
 function Valideer(id) {
   var answer;
   switch (id) {
@@ -23,5 +26,5 @@ function Valideer(id) {
     document.getElementById(`question_${next}`).style.visibility = 'visible';
     document.getElementById(`question_${next}_question`).style.visibility = 'visible';
     document.getElementById(`button_${next}_question`).style.visibility = 'visible';
-  } else alert("Niet valsspelen, gewoon afwachten tot 'k het antwoord geef");
+  } else alert(mistakes[(index++) % mistakes.length]);
 }
